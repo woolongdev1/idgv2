@@ -1939,7 +1939,7 @@ int64_t GetBlockValue(int nHeight)
     } else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= 7201) {
         CoinAmount = static_cast<int64_t>(1 * COIN);
     } else {
-        CoinAmount = static_cast<int64_t>(0.15 * COIN);
+        CoinAmount = static_cast<int64_t>(0.50 * COIN);
     }
     return CoinAmount;
 }
@@ -1953,12 +1953,12 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
         ret = 0;
     } else if (nHeight > 349) {
         //ret = blockValue / (100 / 50);
-        ret = 0.25;
+        ret = blockValue * .70;
     } else {
         //When zPIV is staked, masternode only gets 2 DEALT
         ret = 1 * COIN;
         if (isZPIVStake)
-            ret = 2 * COIN;
+            ret = 1 * COIN;
     }
 
     return ret;
