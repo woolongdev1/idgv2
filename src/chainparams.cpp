@@ -201,10 +201,14 @@ public:
         }
 
 
-        vFixedSeeds.clear();
-        vSeeds.clear();
+        //vFixedSeeds.clear();
+        //vSeeds.clear();
         //vSeeds.push_back(CDNSSeedData("dns1", "dns1.idealgoldv2chain.org"));
-
+        vSeeds.push_back(CDNSSeedData("155.138.212.145", "155.138.212.145")); //Fixed seed node
+        vSeeds.push_back(CDNSSeedData("155.138.212.71", "155.138.212.71")); //Fixed seed node
+        vSeeds.push_back(CDNSSeedData("155.138.212.233", "155.138.212.233")); //Fixed seed node
+        vSeeds.push_back(CDNSSeedData("155.138.213.103", "155.138.213.103")); //Fixed seed node
+        vSeeds.push_back(CDNSSeedData("68.196.203.162", "68.196.203.162")); //Fixed seed node
 
         // idealgoldv2 addresses start with 'T'
         //base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,65);
